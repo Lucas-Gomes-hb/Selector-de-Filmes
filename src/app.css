@@ -52,10 +52,14 @@ body {
     font-size: 20px;
     color: #bcbcbc;
     font-family: "Sono", sans-serif;
-    margin-bottom: 50px;
 }
 
 #section {
     display: flex;
     justify-content: space-between;
+}
+
+#aside {
+    width: 20%;
+    padding: 1%;
 }

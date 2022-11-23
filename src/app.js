@@ -12,8 +12,10 @@ class App extends React.Component {
           <div className='pageTitle'>Escolha da Vez</div>
           <div className='pageSubTitle'>행운을 빌어요 라리</div>
         </div>
-        <div id='aside'></div>
-        <div id='section'>{Selects}</div>
+        <div id='section'>
+          <div id='aside'>DASD</div>
+          {Selects}
+        </div>
       </div>
     );
   }
