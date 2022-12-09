@@ -83,7 +83,7 @@ export const styleColorOption = {
     control: (style) => {
         return {
             ...style,
-            backgroundColor: "#eeeeee",
+            backgroundColor: "#ffffff",
             color: "#555555",
         };
     },
@@ -92,7 +92,7 @@ export const styleColorOption = {
 
         return {
             ...style,
-            backgroundColor: state.isFocused ? color.css() : "#eeeeee",
+            backgroundColor: state.isFocused ? color.css() : "#ffffff",
             color: state.isFocused ? "#FFF" : "#555555",
             cursor: "pointer",
             ":active": {
@@ -106,9 +106,42 @@ export const styleColorOption = {
     },
     menu: (style) => ({
         ...style,
-        backgroundColor: "#eeeeee",
+        backgroundColor: "#ffffff",
     }),
     input: (style) => ({...style, ...dot() }),
     placeholder: (style) => ({...style, ...dot("#ccc") }),
     singleValue: (style, state) => ({...style, ...dot(state.data.color) }),
+};
+
+export const styleNormalSelect = {
+    control: (style) => {
+        return {
+            ...style,
+            backgroundColor: "#ffffff",
+            color: "#555555",
+        };
+    },
+    option: (style, state) => {
+
+        return {
+            ...style,
+            backgroundColor: state.isFocused ? "#dadada" : "#ffffff",
+            color: state.isFocused ? "#242424" : "#555555",
+            cursor: "pointer",
+            ":active": {
+                ...style[":active"],
+                backgroundColor: !state.isDisabled ?
+                    state.isSelected ?
+                    state.data.color :
+                    "#dadada" : undefined,
+            },
+        };
+    },
+    menu: (style) => ({
+        ...style,
+        backgroundColor: "#ffffff",
+    }),
+    input: (style) => ({...style }),
+    placeholder: (style) => ({...style }),
+    singleValue: (style, state) => ({...style }),
 };
